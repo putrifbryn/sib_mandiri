@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Tiket Travel</title>
+
+    <!-- Ext CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!-- Int CSS -->
+    <style>
+        body {
+            background-image: url(img/bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #table {
+            margin: 2rem auto;
+        }
+
+        .container form #table tr td {
+            padding: 5px 10px; 
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: #40444e; text-align: center;"><span style="font-size: 1.1em;">Form Pemesanan</span> <br> Tiket Travel</h2>
+        <form action="" method="post">
+            <table id="table">
+                <tr>
+                    <!-- Nama -->
+                    <td><label for="fullname">Nama Lengkap</label></td>
+                    <td><input type="text" name="fullname" id="fullname" placeholder="Masukkan nama lengkap" required></td>
+                </tr>
+                <tr>
+                    <!-- Email -->
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" name="email" id="email" placeholder="Masukkan email" required></td>
+                </tr>
+
+                <tr>
+                    <!-- Nomor Telp -->
+                    <td><label for="phone">Nomor Telepon</label></td>
+                    <td><input type="tel" name="phone" id="phone" placeholder="Masukkan nomor telepon" required></td>
+                </tr>
+
+                <tr>
+                    <!-- Rute Perjalanan -->
+                    <td><label for="route">Rute Perjalanan</label></td>
+                    <td>
+                        <select name="route" id="route" required>
+                            <option value="" selected>Pilih Rute</option>
+                            <option value="Jakarta - Bandung">Jakarta - Bandung</option>
+                            <option value="Bandung - Surabaya">Bandung - Surabaya</option>
+                            <option value="Jakarta - Yogyakarta">Jakarta - Yogyakarta</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-- Tanggal Keberangkatan -->
+                    <td><label for="departure-date">Tanggal Keberangkatan</label></td>
+                    <td><input type="date" name="departure-date" id="departure-date" required></td>
+                </tr>
+
+                <tr>
+                    <!-- Waktu Keberangkatan -->
+                    <td><label for="departure-time">Waktu Keberangkatan</label></td>
+                    <td>
+                        <select name="departure-time" id="departure-time" required>
+                            <option value="08:00">08:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-- Jumlah Penumpang -->
+                    <td><label for="passengers">Jumlah Penumpang</label></td>
+                    <td><input type="number" name="passengers" id="passengers" min="1" max="6" value="1" required></td>
+                </tr>
+
+                <tr>
+                    <!-- Metode Pembayaran -->
+                    <td><label for="payment">Metode Pembayaran</label></td>
+                    <td>
+                        <select name="payment" id="payment" required>
+                            <option value="">Pilih Metode Pembayaran</option>
+                            <option value="Transfer Bank">Transfer Bank</option>
+                            <option value="Kartu Kredit">Kartu Kredit</option>
+                            <option value="E-Wallet">E-Wallet</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-- Persetujuan Syarat dan Ketentuan -->
+                    <td colspan="2" style="padding-top: 10px; box-sizing: border-box;">
+                        <label for="terms">
+                            <input type="checkbox" name="terms" id="terms" required> Saya setuju dengan <b style="color: #00aa5b;">syarat</b> dan <b style="color: #00aa5b;">ketentuan</b>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-top: 30px; box-sizing: border-box; text-align: right;">         
+                        <!-- Tombol -->
+                        <button type="reset">Reset</button>
+                        <button type="submit" id="submit">Pesan Tiket</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
